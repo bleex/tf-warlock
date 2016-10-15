@@ -6,8 +6,8 @@
 
 /loaded __BLX_DEF__/worlds.tf
 
+/addworld warlock warlock.pl 23
 /addworld echo localhost 7
 /addworld echo2 localhost 7
 /addworld discard localhost 9
-/addworld warlock warlock.pl 23
 
