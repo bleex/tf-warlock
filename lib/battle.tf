@@ -86,7 +86,7 @@
 		/dzwiek %%;\
         	/__frag_licz MOJE %{P1} %%;\
 		/let __a=$[ftime("%Y%m%d-%H:%M:%S")] %%;\
-		/echo %%{__a} %{P1} %%| /writefile -a log/FRAGI-${world_name} %%;\
+		/echo %%{__a} %{P1} %%| /writefile -a private/log/FRAGI-${world_name} %%;\
 		/akcja_all %%;\
 		/akcja_zabiles %%;\
 		/akcja_ctrl_trigger 1 %%;\

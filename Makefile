@@ -2,6 +2,8 @@
 
 all: logs
 	git add .
+	git submodule foreach "git add ."
+	git submodule foreach "git commit -a -m \"`date`\""
 	git commit -a -m "`date`"
 	#git push --mirror origin
 
