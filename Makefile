@@ -7,6 +7,6 @@ all: logs
 
 
 logs:
-	@find ./log/ \( -name "*-echo.log" -o -name "*-discard.log" -o -name "*-.log" -o -regex "\.\/log\/\(ZIOLA\|FRAGI\)-\(discard\|echo\)" \) -exec rm {} \;
-	@find ./log/ -name "*.log" -exec bzip2 {} \;
+	@find ./private/log/ \( -name "*-echo.log" -o -name "*-discard.log" -o -name "*-.log" -o -regex "\.\/log\/\(ZIOLA\|FRAGI\)-\(discard\|echo\)" \) -exec rm {} \;
+	@find ./private/log/ -name "*.log" -exec bzip2 {} \;
 	

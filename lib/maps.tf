@@ -9,7 +9,7 @@
 /def mapa = \
 	/set end_color=\033[0;33m %;\
 	/echo -aBCgreen Poczatek %;\
-	/readfile maps/%{1} %;\
+	/readfile private/maps/%{1} %;\
 	/set end_color=\033[37;40;0m %;\
 	/echo -aBCgreen Koniec %;\
 
@@ -17,7 +17,7 @@
 /def listmap = \
 	/set end_color=\033[0;33m %;\
 	/echo -aBCgreen Poczatek %;\
-	/sys ls maps %;\
+	/sys ls private/maps %;\
 	/set end_color=\033[37;40;0m %;\
 	/echo -aBCgreen Koniec %;\
 
