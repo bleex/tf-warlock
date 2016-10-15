@@ -42,7 +42,7 @@
 /set ochlej=  0
 /set strach= 0
 
-/switch_do expowiska wrak
+/e karly
 
 /def akcja_atak = /test
 /def akcja_wsparcie = /test

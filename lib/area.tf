@@ -78,4 +78,5 @@
 /def e = \
 	/eval /switch_do expowiska %{1} %;\
 	/eval /switch_do expowiska_bindy %{1} %;\
-	/eval /switch_do expowiska_trigger %{1} 
+	/eval /switch_do expowiska_trigger %{1} %;\
+	/akcja_ctrl_potworki 1	
