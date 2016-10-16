@@ -144,15 +144,25 @@
 /alias pdt /send przejdz do tylu
 
 
-/alias wp /send wskaz %{*} %{__SWITCH_potworki_VAL2}
-/alias wp2 /send wskaz drugiego %{*} %{__SWITCH_potworki_VAL2}
-/alias wp3 /send wskaz trzeciego %{*} %{__SWITCH_potworki_VAL2}
-/alias wp4 /send wskaz czwartego %{*} %{__SWITCH_potworki_VAL2}
-/alias wp5 /send wskaz piatego %{*} %{__SWITCH_potworki_VAL2}
-/alias wp6 /send wskaz szostego %{*} %{__SWITCH_potworki_VAL2}
-/alias wp7 /send wskaz siodmego %{*} %{__SWITCH_potworki_VAL2}
-/alias wp8 /send wskaz osmego %{*} %{__SWITCH_potworki_VAL2}
-/alias wp9 /send wskaz dziewiatego %{*} %{__SWITCH_potworki_VAL2}
+/def wp = /send wskaz %{*} %{__SWITCH_potworki_VAL2}
+/def wp2 = /send wskaz drugiego %{*} %{__SWITCH_potworki_VAL2}
+/def wp3 = /send wskaz trzeciego %{*} %{__SWITCH_potworki_VAL2}
+/def wp4 = /send wskaz czwartego %{*} %{__SWITCH_potworki_VAL2}
+/def wp5 = /send wskaz piatego %{*} %{__SWITCH_potworki_VAL2}
+/def wp6 = /send wskaz szostego %{*} %{__SWITCH_potworki_VAL2}
+/def wp7 = /send wskaz siodmego %{*} %{__SWITCH_potworki_VAL2}
+/def wp8 = /send wskaz osmego %{*} %{__SWITCH_potworki_VAL2}
+/def wp9 = /send wskaz dziewiatego %{*} %{__SWITCH_potworki_VAL2}
+
+/def podp = /send podejrzyj %{*} %{__SWITCH_potworki_VAL2}
+/def podp2 = /send podejrzyj drugiego %{*} %{__SWITCH_potworki_VAL2}
+/def podp3 = /send podejrzyj trzeciego %{*} %{__SWITCH_potworki_VAL2}
+/def podp4 = /send podejrzyj czwartego %{*} %{__SWITCH_potworki_VAL2}
+/def podp5 = /send podejrzyj piatego %{*} %{__SWITCH_potworki_VAL2}
+/def podp6 = /send podejrzyj szostego %{*} %{__SWITCH_potworki_VAL2}
+/def podp7 = /send podejrzyj siodmego %{*} %{__SWITCH_potworki_VAL2}
+/def podp8 = /send podejrzyj osmego %{*} %{__SWITCH_potworki_VAL2}
+/def podp9 = /send podejrzyj dziewiatego %{*} %{__SWITCH_potworki_VAL2}
 
 
 
@@ -244,7 +254,7 @@
 
 ;; Wspieranie (do napisania)
 
-/alias pd /send porzuc druzyne
+/def pd = /send porzuc druzyne
 
 ;; Bron i zbroje
 
