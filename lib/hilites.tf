@@ -49,7 +49,7 @@
 ;; Potwory
 ;; Przy dodawaniu nowych potworow z niestandardowa liczba mnoga nalezy pamietac o (?:...)
 
-/set POTWORY (?: (?:behemot|besti|demon(?:ic|)|gargoyl|ghast|ghoul|gigant|gnil(?:ec|ce)|goblin|gobor|golem|gremlin|harpi|hobgoblin|hobgobor|horror|humanoid|kmaran|kobold|kosciej|licz|minotaur|moloh|mumi|niedzwiedz|ork|oslizg|osmiornic|ogar|ogr(?:zyc|)|ogrylion|olbrzym(?!i)|ozywien(?:iec|ce)|pajak|pajeczyc|poczwar|potepien(?:iec|c)|potwor|robak|ryboczlek|rycerz|skarabeusz|smok|strzyg|szkielet|topiel(?:ec|ce)|troll|upior|uruk|w[ae]z|widm|zjaw|zomb(?:i|iego)|zwierzoludz)(?:ek|(?:k|)(?:ie|ow|[aeyio]|)))
+/set POTWORY (?: (?:behemot|besti|demon(?:ic|)|gargoyl|ghast|ghoul|gigant|gnil(?:ec|ce)|goblin|gobor|golem|gremlin|harpi|hobgoblin|hobgobor|horror|humanoid|kmaran|kobold|kosciej|kosciotrup|licz|minotaur|moloh|mumi|niedzwiedz|ork|oslizg|osmiornic|ogar|ogr(?:zyc|)|ogrylion|olbrzym(?!i)|ozywien(?:iec|ce)|pajak|pajeczyc|poczwar|potepien(?:iec|c)|potwor|robak|ryboczlek|rycerz|skarabeusz|smok|strzyg|szkielet|topiel(?:ec|ce)|troll|upior|uruk|w[ae]z|widm|zjaw|zomb(?:i|iego)|zwierzoludz)(?:ek|(?:k|)(?:ie|ow|[aeyio]|)))
 
 /eval /def -i -F -P1Cred;2Cbgcyan,Cred;3Cbggreen,Cred -w -p910 -t"(%{POTWORY})(?: (?:(przybywa(?:ja|))|(odchodzi))|[,. ])" __potwory_hilite
 

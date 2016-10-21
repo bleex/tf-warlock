@@ -73,6 +73,7 @@
 /__potwory komar komara komarem komarowi
 /__potwory kon konia koniem koniowi
 /__potwory kosciej koscieja kosciejem kosciejowi
+/__potwory kosciotrup kosciotrupa kosciotrupem kosciotrupowi
 /__potwory kot kota kotem kotu
 /__potwory kozica kozice kozica kozicy
 /__potwory krasnolud krasnoluda krasnoludem krasnoludowi
