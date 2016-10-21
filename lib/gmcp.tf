@@ -8,8 +8,8 @@
 
 ;; Initial define to get some data to have foundation to work on scripts
 
-;;/def -hGMCP gmcp_receive = /echo GMCP: %{*} %;\
-/def -hGMCP gmcp_receive = \
+;;/def -hGMCP gmcp_receive = \
+/def -hGMCP gmcp_receive = /echo GMCP: %{*} %;\
 	/if (regmatch("Room.([a-zA-Z]+) { (.*) }$", {*}) > 0) \
 		/test $[process_room({P1},{P2})] %;\
 	/endif
@@ -25,7 +25,7 @@
 	/if ({1} =~ "Info") \
 	       /echo INFO: %{2} %;\
 ;;/let i $[regmatch('"wewnatrz":([0-9]), "obszar": "([a-zA-Z0-9, ]+)", "idprev": "([^\"]+)", "domena": "([a-zA-Z]+)", "id": "([^\"]+)", "komenda": .*', {2})] %;\
-	       /let i $[regmatch('\"wewnatrz\"\:([0-9]), .*', {2})] %;\
+	       /let i $[regmatch('"wewnatrz"\:([0-9]), .*', {2})] %;\
 	       /vecho i %;\
         /endif %;\
 	/endif	       
