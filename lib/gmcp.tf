@@ -10,22 +10,14 @@
 
 ;;/def -hGMCP gmcp_receive = \
 /def -hGMCP gmcp_receive = /echo GMCP: %{*} %;\
-	/if (regmatch("Room.([a-zA-Z]+) { (.*) }$", {*}) > 0) \
-		/test $[process_room({P1},{P2})] %;\
+	/if ({1} =~ "Room.Info" ) \
+		/test process_room_info({-1}) %;\
 	/endif
 
 
 ;; INFO: "wewnatrz": 0, "rodzaj": 8, "obszar": "Sithe, lokacje", "idprev": "$1$$a5SudpvkmEnsbgN4VGrpR0", "domena": "Orchia", "id": "$1$$\/u\/vtMpZQbCieNa4CYDWM1", "komenda": [ "S", "na wschod", "wschod", 1 ]
 
-/def process_room = \
-	/if ({1} =~ "Glance") \
-;;/echo GLANCE: %{2} %;\
-		/test %;\
-	/else \
-	/if ({1} =~ "Info") \
-	       /echo INFO: %{2} %;\
-;;/let i $[regmatch('"wewnatrz":([0-9]), "obszar": "([a-zA-Z0-9, ]+)", "idprev": "([^\"]+)", "domena": "([a-zA-Z]+)", "id": "([^\"]+)", "komenda": .*', {2})] %;\
-	       /let i $[regmatch('"wewnatrz"\:([0-9]), .*', {2})] %;\
-	       /vecho i %;\
-        /endif %;\
-	/endif	       
+/def process_room_info = \
+	/echo INFO: %{1} %;\
+	/let i $[regmatch("\"wewnatrz\": ([01]), \"rodzaj\": ([0-9]+), \"obszar\": \"([^\"]+)\", \"idprev\": \"([^\"]+)\", \"domena\": \"([^\"]+)\", \"id\": \"([^\"]+)\", \"komenda\": \[ \"([^\"]+)\", \"([^\"]+)\", \"([^\"]+)\", ([0-9]+) \]", {1})] %;\
+	/vecho i
