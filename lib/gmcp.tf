@@ -74,3 +74,35 @@
 	/let fname=private/gen/$[ftime("%Y%m%d-%H%M%S", time())].tf %;\
 	/listvar __MAP_* %| /writefile -a %{fname} %;\
 	/echo /load %{fname} %| /writefile -a private/gen/maps.tf 
+
+/def map_init = \
+	/eval /set __MAP_CONST_$[textencode("polnoc")]_X=0 %;\
+	/eval /set __MAP_CONST_$[textencode("polnoc")]_Y=1 %;\
+	/eval /set __MAP_CONST_$[textencode("polnoc")]_Z=0 %;\
+	/eval /set __MAP_CONST_$[textencode("poludnie")]_X=0 %;\
+	/eval /set __MAP_CONST_$[textencode("poludnie")]_Y=-1 %;\
+	/eval /set __MAP_CONST_$[textencode("poludnie")]_Z=0 %;\
+	/eval /set __MAP_CONST_$[textencode("wschod")]_X=1 %;\
+	/eval /set __MAP_CONST_$[textencode("wschod")]_Y=0 %;\
+	/eval /set __MAP_CONST_$[textencode("wschod")]_Z=0 %;\
+	/eval /set __MAP_CONST_$[textencode("zachod")]_X=-1 %;\
+	/eval /set __MAP_CONST_$[textencode("zachod")]_Y=0 %;\
+	/eval /set __MAP_CONST_$[textencode("zachod")]_Z=0 %;\
+	/eval /set __MAP_CONST_$[textencode("polnocny-zachod")]_X=-1 %;\
+	/eval /set __MAP_CONST_$[textencode("polnocny-zachod")]_Y=1 %;\
+	/eval /set __MAP_CONST_$[textencode("polnocny-zachod")]_Z=0 %;\
+	/eval /set __MAP_CONST_$[textencode("polnocny-wschod")]_X=1 %;\
+	/eval /set __MAP_CONST_$[textencode("polnocny-wschod")]_Y=1 %;\
+	/eval /set __MAP_CONST_$[textencode("polnocny-wschod")]_Z=0 %;\
+	/eval /set __MAP_CONST_$[textencode("poludniowy-zachod")]_X=-1 %;\
+	/eval /set __MAP_CONST_$[textencode("poludniowy-zachod")]_Y=-1 %;\
+	/eval /set __MAP_CONST_$[textencode("poludniowy-zachod")]_Z=0 %;\
+	/eval /set __MAP_CONST_$[textencode("poludniowy-wschod")]_X=1 %;\
+	/eval /set __MAP_CONST_$[textencode("poludniowy-wschod")]_Y=-1 %;\
+	/eval /set __MAP_CONST_$[textencode("poludniowy-wschod")]_Z=0 %;\
+	/eval /set __MAP_CONST_$[textencode("gora")]_X=0 %;\
+	/eval /set __MAP_CONST_$[textencode("gora")]_Y=0 %;\
+	/eval /set __MAP_CONST_$[textencode("gora")]_Z=1 %;\
+	/eval /set __MAP_CONST_$[textencode("dol")]_X=0 %;\
+	/eval /set __MAP_CONST_$[textencode("dol")]_Y=0 %;\
+	/eval /set __MAP_CONST_$[textencode("dol")]_Z=-1
