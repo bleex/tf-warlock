@@ -44,5 +44,6 @@
 /require def/stan.tf
 /require def/defaults.tf
 /require def/worlds.tf
+/require lib/gmcp.tf
 /require private/private-worlds.tf
 
