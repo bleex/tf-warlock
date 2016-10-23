@@ -20,4 +20,18 @@
 /def process_room_info = \
 	/echo INFO: %{1} %;\
 	/let i $[regmatch("\"wewnatrz\": ([01]), \"rodzaj\": ([0-9]+), \"obszar\": \"([^\"]+)\", \"idprev\": \"([^\"]+)\", \"domena\": \"([^\"]+)\", \"id\": \"([^\"]+)\", \"komenda\": \[ \"([^\"]+)\", \"([^\"]+)\", \"([^\"]+)\", ([0-9]+) \]", {1})] %;\
-	/vecho i
+	/vecho i %;\
+	/if ({i} > 0) \
+		/let _id %{P6} %;\
+		/let _idprev %{P4} %;\
+		/let _domena %{P5} %;\
+		/let _obszar %{P3} %;\
+		/let _region %{P5}:%{P3} %;\
+		/let _cmd %{P9} %;\
+		/let _id $[textencode({_id})] %;\
+		/let _idprev $[textencode({_idprev})] %;\
+		/let _region $[textencode({_region})] %;\
+		/let _cmd $[textencode({_cmd})] %;\
+		/eval /set __MAP_DIR_%{_idprev}_%{_cmd}=%{_id} %;\
+		/eval /set __MAP_REGION_%{_id}=%{_region} %;\
+	/endif
