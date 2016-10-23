@@ -267,22 +267,22 @@
 			/let suffix %{tmp_suffix} %;\
 			/let imie %{tmp_imie} %;\
 			/unset tmp_imie %; /unset tmp_suffix %;\
-			/eval /echo /eval /set __%{id}_suffix %{suffix} %| /writefile -a %{fname}.tf %;\
-			/eval /echo /eval /set __%{id}_imie %{imie} %| /writefile -a %{fname}.tf %;\
+			/eval /echo /eval /set __%{id}_suffix %{suffix} %| /writefile -a %{fname} %;\
+			/eval /echo /eval /set __%{id}_imie %{imie} %| /writefile -a %{fname} %;\
 			/eval /set tmp %%{__%{id}_mianownik} %;\
-			/eval /echo /przypadek_add mianownik %{id} %{suffix} %{tmp} %| /writefile -a %{fname}.tf %;\
+			/eval /echo /przypadek_add mianownik %{id} %{suffix} %{tmp} %| /writefile -a %{fname} %;\
 			/eval /set tmp %%{__%{id}_dopelniacz} %;\
-			/eval /echo /przypadek_add dopelniacz %{id} %{suffix} %{tmp} %| /writefile -a %{fname}.tf %;\
+			/eval /echo /przypadek_add dopelniacz %{id} %{suffix} %{tmp} %| /writefile -a %{fname} %;\
 			/eval /set tmp %%{__%{id}_celownik} %;\
-			/eval /echo /przypadek_add celownik %{id} %{suffix} %{tmp} %| /writefile -a %{fname}.tf %;\
+			/eval /echo /przypadek_add celownik %{id} %{suffix} %{tmp} %| /writefile -a %{fname} %;\
 			/eval /set tmp %%{__%{id}_biernik} %;\
-			/eval /echo /przypadek_add biernik %{id} %{suffix} %{tmp} %| /writefile -a %{fname}.tf %;\
+			/eval /echo /przypadek_add biernik %{id} %{suffix} %{tmp} %| /writefile -a %{fname} %;\
 			/eval /set tmp %%{__%{id}_narzednik} %;\
-			/eval /echo /przypadek_add narzednik %{id} %{suffix} %{tmp} %| /writefile -a %{fname}.tf %;\
+			/eval /echo /przypadek_add narzednik %{id} %{suffix} %{tmp} %| /writefile -a %{fname} %;\
 			/eval /set tmp %%{__%{id}_miejscownik} %;\
-			/eval /echo /przypadek_add miejscownik %{id} %{suffix} %{tmp} %| /writefile -a %{fname}.tf %;\
+			/eval /echo /przypadek_add miejscownik %{id} %{suffix} %{tmp} %| /writefile -a %{fname} %;\
 			/unset tmp %;\
-			/eval /echo /eval /set __dodani %%%{__dodani} %{id} %| /writefile -a %{fname}.tf %;\
+			/eval /echo /eval /set __dodani %%%{__dodani} %{id} %| /writefile -a %{fname} %;\
 		/endif %;\
 	/else \
 		/echo -aBCred /tm_save <id> %;\
