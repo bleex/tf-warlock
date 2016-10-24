@@ -64,11 +64,25 @@
 		/let _drzwi %{P3} %;\
 		/let _id $[textencode({_id})] %;\
 		/eval /set __MAP_NAME_%{_id}=%{_nazwa} %;\
-		/eval /set __MAP_EXITS_%{_id}=%{_wyjscia} %;\
-		/eval /set __MAP_DOORS_%{_id}=%{_drzwi} %;\
+		/eval /set __MAP_EXITS_%{_id}=$[process_lists({_wyjscia})] %;\
+		/eval /set __MAP_DOORS_%{_id}=$[process_lists({_drzwi})] %;\
 	/else \
 		/echo -aBCred GMCP:GLANCE ERROR: %{1} %;\
 	/endif
+
+;; Input "polnoc", "wschod", "poludnie", "zachod"
+;; Output polnoc wschod poludnie zachod
+;; Input "polnocny-wschod", "poludnie"
+;; Output polnocny_45_wschod poludnie
+/def process_lists = \
+	/let _inp %{*} %;\
+	/let _out= %;\
+	/while (regmatch("\"([^\"]+)\"", {_inp}) > 0) \
+		/let _inp %{PR} %;\
+		/let _out %{_out} $[textencode({P1})] %;\
+	/done %;\
+	/result _out
+
 
 /def map_save = \
 	/let fname=private/gen/$[ftime("%Y%m%d-%H%M%S", time())].tf %;\
