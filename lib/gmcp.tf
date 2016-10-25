@@ -63,9 +63,13 @@
 		/let _wyjscia %{P4} %;\
 		/let _drzwi %{P3} %;\
 		/let _id $[textencode({_id})] %;\
+		/let _exits {__MAP_EXITS_%{_id}} %;\
+		/let _exits $[test(_exits)] %;\
+		/let _doors {__MAP_DOORS_%{_id}} %;\
+		/let _doors $[test(_doors)] %;\
 		/eval /set __MAP_NAME_%{_id}=%{_nazwa} %;\
-		/eval /set __MAP_EXITS_%{_id}=$[process_lists({_wyjscia})] %;\
-		/eval /set __MAP_DOORS_%{_id}=$[process_lists({_drzwi})] %;\
+		/eval /set __MAP_EXITS_%{_id}=$[process_lists({_wyjscia}, {_exits})] %;\
+		/eval /set __MAP_DOORS_%{_id}=$[process_lists({_drzwi}, {_doors})] %;\
 	/else \
 		/echo -aBCred GMCP:GLANCE ERROR: %{1} %;\
 	/endif
@@ -75,12 +79,14 @@
 ;; Input "polnocny-wschod", "poludnie"
 ;; Output polnocny_45_wschod poludnie
 /def process_lists = \
-	/let _inp %{*} %;\
+	/let _inp %{1} %;\
+	/let _current %{2} %;\
 	/let _out= %;\
 	/while (regmatch("\"([^\"]+)\"", {_inp}) > 0) \
 		/let _inp %{PR} %;\
 		/let _out %{_out} $[textencode({P1})] %;\
 	/done %;\
+	/let _out $(/unique %{_out} %{_current}) %;\
 	/result _out
 
 
