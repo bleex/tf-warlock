@@ -15,7 +15,7 @@
 			/if (regmatch("[ a-z]+", {__tmp})) \
 				/__ziola_licz %%%{__tmp} %%%;\
 				/let __a=$[ftime("%Y%m%d-%H:%M:%S")] %%%;\
-				/echo %%%{__a} %%%{__tmp} %%%| /writefile -a log/ZIOLA-${world_name} %%%;\
+				/echo %%%{__a} %%%{__tmp} %%%| /writefile -a private/log/ZIOLA-${world_name} %%%;\
 				/akcja_znajdujesz %%%;\
 			/endif %%%;\
 			/unset __tmp %;\

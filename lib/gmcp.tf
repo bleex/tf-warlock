@@ -52,7 +52,7 @@
 
 ;; GMCP: Room.Glance { "usluga": 7, "nazwa": "Wnetrze gospody w Impur-kir", "drzwi": [ ], "wyjscia": [ "wyjscie", "schodki" ], "id": "$1$$2Xg49pqan8dJFF6Kfq9KB1" }
 ;; GMCP: Room.Glance { "usluga": 6, "nazwa": "Na placu w Impur-kir", "drzwi": [ ], "wyjscia": [ "polnoc", "wschod", "poludnie", "zachod" ], "id": "$1$$MAVWHd2BQ1HPrDCtnScfv." }
-
+;; Room.Glance { "usluga": 0, "nazwa": "Drzwi w komnacie", "drzwi": [ [ "poludniowy-wschod", 1 ] ], "wyjscia": [ "polnoc", "polnocny-wschod", "wschod", "poludnie", "zachod" ], "id": "$1$$nMAtqXBbMsqoAsGQScjQi1" }
 
 /def process_room_glance = \
 	/gdebug 2 GLANCE: %{1} %;\

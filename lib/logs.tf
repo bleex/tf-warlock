@@ -8,7 +8,7 @@
 
 /def -i -p100 -h'connect' connect_log = \
 	/set LOG_FILE_${world_name}=private/log/$[ftime("%Y%m%d-%H%M%S", time())]-${world_name}.log %;\
-	/sys mkdir -p log %;\
+	/sys mkdir -p private/log %;\
 	/eval /log -i %%LOG_FILE_${world_name} %;\
 	/eval /log -l %%LOG_FILE_${world_name} %;\
 	/eval /log -w %%LOG_FILE_${world_name} %;\
