@@ -274,3 +274,8 @@
 
 /def sp = /send sp
 
+;; Osgiliath
+/def _osg_schody = /send zejdz po schodach
+/def _osg_tunel = /send wejdz do tunelu
+/def _osg_sarkofag = /send otworz sarkofag %; /send wejdz do sarkofagu
+

@@ -1,4 +1,4 @@
-;; Copyright 2004-2010 Liwiusz Ociepa <liwiusz<malpka>gmail,com>
+;; Copyright 2004-2016 Liwiusz Ociepa <liwiusz<malpka>gmail,com>
 ;;    This program is free software; you can redistribute it and/or modify
 ;;    it under the terms of the GNU General Public License as published by
 ;;    the Free Software Foundation; either version 2 of the License, or
@@ -43,6 +43,8 @@
 /__expowisko_pot morgul ork uruk pajeczyca czarnoodziany_mezczyzna
 /__expowisko_pot ogry ogr gnoll wilk wilczyca smoketka
 /__expowisko_pot orki ork
+/__expowisko_pot osgiliath czlowiek kosciej
+/__expowisko_bindy osgiliath /_osg_schody /_osg_tunel /_osg_sarkofag
 /__expowisko_pot ozywience ozywieniec
 /__expowisko_trigger ozywience /_wez_mikstury
 /__expowisko_pot pajaki pajak maly_pajak duzy_pajak gigantyczny_pajak
