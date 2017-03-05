@@ -64,7 +64,7 @@
 /__expowisko_pot warownia czlowiek zwierzoludz
 /__expowisko_bindy warownia /_war_przekrec_hak /_war_pociagnij_lancuch
 /__expowisko_trigger warownia /_wez_zloto
-/__expowisko_pot wieza kosciotrup
+/__expowisko_pot wieza kosciotrup szkielet zombie zombie
 /__expowisko_pot wioska maly_goblin nieduzy_goblin duzy_goblin ogromny_goblin goblin
 /__expowisko_pot wrak topielec ryboczlek
 /__expowisko_trigger wrak /_wez_zloto

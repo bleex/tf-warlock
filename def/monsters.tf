@@ -158,6 +158,7 @@
 /__potwory zbroja zbroje zbroja zbroi
 /__potwory zjawa zjawe zjawa zjawie
 /__potwory zombi zombiego zombim zombiemu
+/__potwory zombie zombiego zombim zombiemu
 /__potwory zuk zuka zukiem zukowi
 /__potwory zwierzoludz zwierzoludzia zwierzoludziem zwierzoludziowi
 
